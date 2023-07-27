@@ -9,6 +9,8 @@ const Navbar = () => {
       <div className="logoMain">
         <Image src={logo} alt="logo" />
         <div>SocialSeedlings</div>
+        <div className="midTagLine">Fostering Societal Change</div>
+        <div className="endTagLine">Eat. Socialize. Sleep <br/>xRepeat</div>
       </div>
     </div>
   );

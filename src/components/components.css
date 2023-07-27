@@ -1,3 +1,24 @@
 footer{
     margin-top: auto;
+    margin-bottom: 25px;
+    color: #00FFC4;
+    font-weight: 200;
+}
+
+.logoMain{
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    justify-content: space-between;
+}
+.midTagLine{
+    margin-left: 400px;
+    margin-right: 400px;
+    color: #00FFC4;
+}
+.endTagLine{
+    text-align: left;
+    color: #00FFC4;
 }
