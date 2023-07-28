@@ -9,9 +9,21 @@ body {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(#14171F, #0C2640, #14171F);
-  color: #f0f0f0;
+
 }
 footer{
   margin-top: auto;
+}
+
+.light{
+  background-image: linear-gradient(#ffffff, #cfcfcf, #ffffff);
+  color: #000;
+}
+.dark{
+  background-image: linear-gradient(#14171F, #0C2640, #14171F);
+  color: #f0f0f0;
+}
+
+.theme{
+  transition: 1s all ease;
 }
