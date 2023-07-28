@@ -10,6 +10,9 @@
     margin-left: 400px;
     margin-right: 400px;
     color: #00FFC4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .endTagLine{
     text-align: left;

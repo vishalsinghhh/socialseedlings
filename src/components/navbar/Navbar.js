@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../../images/logo.svg";
-import styles from "./navbar.module.css"
+import styles from "./navbar.module.css";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 
 const Navbar = () => {
   return (
@@ -9,8 +10,16 @@ const Navbar = () => {
       <div className={styles.logoMain}>
         <Image src={logo} alt="logo" />
         <div>SocialSeedlings</div>
-        <div className={styles.midTagLine}>Fostering Societal Change</div>
-        <div className={styles.endTagLine}>Eat. Socialize. Sleep <br/>xRepeat</div>
+        <div className={styles.midTagLine}>
+          Fostering Societal Change
+          <div>
+            <DarkModeToggle />
+          </div>
+        </div>
+        <div className={styles.endTagLine}>
+          Eat. Socialize. Sleep <br />
+          xRepeat
+        </div>
       </div>
     </div>
   );
