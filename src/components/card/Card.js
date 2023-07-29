@@ -14,6 +14,16 @@ const Card = (randomPhoto) => {
           alt="logo"
         />
         <div>{randomPhoto.randomPhoto.user.instagram_username}</div>
+        <div>{randomPhoto.randomPhoto.user.location}</div>
+        <div>{randomPhoto.randomPhoto.created_at}</div>
+        <div className={styles.imageMain}>
+          <Image
+            src={randomPhoto.randomPhoto.urls.regular}
+            width={350}
+            height={380}
+            alt="logo"
+          />
+        </div>
       </div>
     </div>
   );
