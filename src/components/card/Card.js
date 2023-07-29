@@ -19,12 +19,13 @@ const Card = (randomPhoto) => {
     "Nov",
     "Dec",
   ];
+
   return (
     <section>
+    
     <Util
         name={
-          randomPhoto.randomPhoto.user.first_name+
-          randomPhoto.randomPhoto.user.last_name
+          (randomPhoto.randomPhoto.user.first_name+" "+ randomPhoto.randomPhoto.user.last_name)
         }
       />
       <div className={styles.container}>

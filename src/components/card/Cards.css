@@ -16,7 +16,8 @@ section{
     position: relative;
 }
 .scroll span{
-    padding: 10px;
+    min-width: max-content;
+    padding: 5px;
 }
 
 
