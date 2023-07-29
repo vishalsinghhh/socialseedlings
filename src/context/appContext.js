@@ -30,7 +30,7 @@ const AppProvider = ({ children }) => {
     dispatch({type:GET_RANDOM_PHOTO_BEGIN})
     try {
       const response = await axios.get(
-        `https://api.unsplash.com/photos/random?client_id=ja4_MxOihhzXv8nFowzO0ggv_uUHZkTvbopJcMm7NX8`
+        `https://api.unsplash.com/photos/random?client_id=PqcxMW7xPwxnAHzrui4FRkUcZA4U6KFi8PCNTvsWawo`
       );
       dispatch({type:GET_RANDOM_PHOTO_SUCCESS, payload:{data:response.data}})
     } catch (error) {

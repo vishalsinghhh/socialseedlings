@@ -1,11 +1,15 @@
 .MainScroll{
     display: flex;
     position: absolute;
+    font-family: "Light";
+    font-size: 60px;
+    max-height: 50px !important;
+    transform: rotate(-2deg);
 }
 .scroll div{
     display: flex;
-    animation: animate 10s linear infinite;
-    animation-delay: -10s;
+    animation: animate 40s linear infinite;
+    animation-delay: -30s;
 }
 
 section{
