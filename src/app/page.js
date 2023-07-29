@@ -1,42 +1,49 @@
 "use client";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { useEffect } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { useAppContext } from "@/context/appContext";
 import Card from "@/components/card/Card";
 
 export default function Home() {
-  const { getRandomPhoto, randomPhotos } = useAppContext();
+  const { getRandomPhoto, randomPhotos, isLoading } = useAppContext();
+
+  const observer = useRef();
+  const lastBookElementRef = useCallback(
+    (node) => {
+      if (isLoading) return;
+      if (observer.current) observer.current.disconnect();
+      observer.current = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          getRandomPhoto()
+        }
+      });
+      if (node) observer.current.observe(node);
+    },
+    [isLoading]
+  );
+
   useEffect(() => {
+    getRandomPhoto();
     // getRandomPhoto();
   }, []);
 
-  // console.log(window.innerHeight);
-  // console.log(document.documentElement.scrollHeight);
-  const handelInfiniteScroll = async () => {
-    console.log("scrollHeight" + document.documentElement.scrollHeight);
-    console.log("innerHeight" + window.innerHeight);
-    console.log("scrollTop" + document.documentElement.scrollTop);
-    try {
-      if (
-        window.innerHeight + document.documentElement.scrollTop + 1 >=
-        document.documentElement.scrollHeight
-      ) {
-        setLoading(true);
-        setPage((prev) => prev + 1);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handelInfiniteScroll);
-    return () => window.removeEventListener("scroll", handelInfiniteScroll);
-  }, []);
   return (
     <div>
-      {randomPhotos.map((item) => {
-        return <Card randomPhoto={item} key={item.id} />;
+      {randomPhotos.map((item, index) => {
+        if (randomPhotos.length === index + 1) {
+          return (
+            <div ref={lastBookElementRef}>
+              <Card randomPhoto={item} key={item.id} />
+            </div>
+          );
+        } else {
+          return (
+            <div>
+              <Card randomPhoto={item} key={item.id} />
+            </div>
+          );
+        }
       })}
     </div>
   );
