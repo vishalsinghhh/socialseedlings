@@ -3,13 +3,19 @@ import Image from "next/image";
 import logo from "../../images/logo.svg";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
     <div>
       <div className={styles.logoMain}>
-        <Image src={logo} alt="logo" />
-        <div>SocialSeedlings</div>
+        <Link href={"/"} className={styles.myLink}>
+          <div className={styles.mainLogo}>
+            <Image src={logo} alt="logo" />
+            <div>SocialSeedlings</div>
+          </div>
+        </Link>
+
         <div className={styles.midTagLine}>
           Fostering Societal Change
           <div>
