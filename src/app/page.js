@@ -15,7 +15,7 @@ export default function Home() {
       if (observer.current) observer.current.disconnect();
       observer.current = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
-          getRandomPhoto()
+          getRandomPhoto();
         }
       });
       if (node) observer.current.observe(node);
@@ -25,7 +25,6 @@ export default function Home() {
 
   useEffect(() => {
     getRandomPhoto();
-    // getRandomPhoto();
   }, []);
 
   return (
@@ -33,13 +32,22 @@ export default function Home() {
       {randomPhotos.map((item, index) => {
         if (randomPhotos.length === index + 1) {
           return (
-            <div ref={lastBookElementRef}>
+            <div className={index===0 ?styles.container1:styles.container2}>
+              <Card randomPhoto={item} key={item.id} />
+              <div ref={lastBookElementRef}></div>
+            </div>
+          );
+        } 
+        else if (index === 0){
+          return (
+            <div className={styles.container1}>
               <Card randomPhoto={item} key={item.id} />
             </div>
           );
-        } else {
+        }
+        else {
           return (
-            <div>
+            <div className={styles.container2}>
               <Card randomPhoto={item} key={item.id} />
             </div>
           );

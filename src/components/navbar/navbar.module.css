@@ -5,6 +5,8 @@
     align-items: center;
     font-size: 16px;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .midTagLine{
     margin-left: 400px;
