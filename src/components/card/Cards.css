@@ -1,6 +1,6 @@
 .MainScroll{
     display: flex;
-    position: relative;
+    position: absolute;
 }
 .scroll div{
     display: flex;
@@ -13,7 +13,10 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    position: relative;
+}
+.scroll span{
+    padding: 10px;
 }
 
 
