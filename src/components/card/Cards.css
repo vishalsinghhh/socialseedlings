@@ -4,7 +4,7 @@
     font-family: "Light";
     font-size: 60px;
     max-height: 50px !important;
-    transform: rotate(-2deg);
+    transform: rotate(-1deg);
 }
 .scroll div{
     display: flex;

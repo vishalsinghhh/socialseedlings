@@ -41,7 +41,7 @@ const Card = (randomPhoto) => {
             />
             <div className={styles.profileImageUser}>
               <div className={styles.userName}>
-                {randomPhoto.randomPhoto.user.instagram_username}
+                {randomPhoto.randomPhoto.user.username}
               </div>
               <div className={styles.location}>
                 {randomPhoto.randomPhoto.user.location}

@@ -33,7 +33,9 @@ export default function Home() {
         if (randomPhotos.length === index + 1) {
           return (
             <div className={index===0 ?styles.container1:styles.container2}>
+            
               <Card randomPhoto={item} key={item.id} />
+              {(isLoading && randomPhotos.length<10) && <div>loading...</div>}
               <div ref={lastBookElementRef}></div>
             </div>
           );
