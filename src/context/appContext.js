@@ -25,7 +25,7 @@ const initialState = {
   isUserLoading: false,
   isUserPhotosLoading: false,
   userInfo: null,
-  userPhotos:null
+  userPhotos: null,
 };
 
 const AppContext = React.createContext();
@@ -56,6 +56,13 @@ const AppProvider = ({ children }) => {
   };
 
   const getUserInfo = async (userName) => {
+    if (!userName) {
+      dispatch({
+        type: GET_USER_INFO_ERROR,
+        payload: { msg: "Oops! Something went wrong" },
+      });
+      return;
+    }
     dispatch({ type: GET_USER_INFO_BEGIN });
     try {
       const response = await axios.get(
@@ -74,7 +81,7 @@ const AppProvider = ({ children }) => {
     }
   };
 
-  const getUserPhotos = async () => {
+  const getUserPhotos = async (userName) => {
     dispatch({ type: GET_USER_PHOTOS_BEGIN });
     try {
       const response = await axios.get(
