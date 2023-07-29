@@ -4,24 +4,62 @@ import Image from "next/image";
 
 const Card = (randomPhoto) => {
   console.log(randomPhoto.randomPhoto);
+  const month = [
+    "Jan",
+    "Feb",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   return (
     <div className={styles.container}>
       <div className={styles.userProfile}>
-        <Image
-          src={randomPhoto.randomPhoto.user.profile_image.medium}
-          width={50}
-          height={50}
-          alt="logo"
-        />
-        <div>{randomPhoto.randomPhoto.user.instagram_username}</div>
-        <div>{randomPhoto.randomPhoto.user.location}</div>
-        <div>{randomPhoto.randomPhoto.created_at}</div>
-        <div className={styles.imageMain}>
+        <div className={styles.userProfileMain}>
+          <Image
+            src={randomPhoto.randomPhoto.user.profile_image.medium}
+            width={50}
+            height={50}
+            alt="logo"
+            className={styles.profileImage}
+          />
+          <div className={styles.profileImageUser}>
+            <div className={styles.userName}>
+              {randomPhoto.randomPhoto.user.instagram_username}
+            </div>
+            <div className={styles.location}>
+              {randomPhoto.randomPhoto.user.location}
+            </div>
+          </div>
+
+          <div className={styles.date}>
+            {randomPhoto.randomPhoto.created_at.split("T")[0].split("-")[2]}
+            <span> </span>
+            {
+              month[
+                parseInt(
+                  randomPhoto.randomPhoto.created_at.split("T")[0].split("-")[1]
+                ) - 1
+              ]
+            }
+            <span>, </span>
+            {randomPhoto.randomPhoto.created_at.split("T")[0].split("-")[0]}
+          </div>
+        </div>
+
+        <div>
           <Image
             src={randomPhoto.randomPhoto.urls.regular}
             width={350}
-            height={380}
+            height={400}
             alt="logo"
+            className={styles.imageMain}
           />
         </div>
       </div>

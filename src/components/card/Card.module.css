@@ -1,7 +1,45 @@
 .container{
+    position: relative;
     background-image: linear-gradient(#272C38, #373E51);
     width: 450px;
     height: 550px;
     border-radius: 10px;
     margin-top: 30px;
+}
+
+.imageMain{
+    border-radius: 10px;
+}
+
+.profileImage{
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+.userProfileMain{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-weight: 300;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.profileImageUser{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 10px;
+}
+.location{
+    font-size: 14px; 
+    color: #cacaca;
+}
+.date{
+    position: absolute;
+    font-size: 14px; 
+    color: #cacaca;
+    right: 50px;
+    top: 50px;
 }
