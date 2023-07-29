@@ -1,0 +1,35 @@
+.MainScroll{
+    display: flex;
+    position: relative;
+}
+.scroll div{
+    display: flex;
+    animation: animate 10s linear infinite;
+    animation-delay: -10s;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+@keyframes animate{
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform:translateX(0%);
+    }
+    100%{
+        transform:translateX(-200%);
+    }
+}

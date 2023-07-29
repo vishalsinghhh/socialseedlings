@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Card.module.css";
 import Image from "next/image";
+import Util from "./Util";
 
 const Card = (randomPhoto) => {
   console.log(randomPhoto.randomPhoto);
@@ -19,51 +20,62 @@ const Card = (randomPhoto) => {
     "Dec",
   ];
   return (
-    <div className={styles.container}>
-      <div className={styles.userProfile}>
-        <div className={styles.userProfileMain}>
-          <Image
-            src={randomPhoto.randomPhoto.user.profile_image.medium}
-            width={50}
-            height={50}
-            alt="logo"
-            className={styles.profileImage}
-          />
-          <div className={styles.profileImageUser}>
-            <div className={styles.userName}>
-              {randomPhoto.randomPhoto.user.instagram_username}
+    <section>
+    <Util
+        name={
+          randomPhoto.randomPhoto.user.first_name+
+          randomPhoto.randomPhoto.user.last_name
+        }
+      />
+      <div className={styles.container}>
+      
+        <div className={styles.userProfile}>
+          <div className={styles.userProfileMain}>
+            <Image
+              src={randomPhoto.randomPhoto.user.profile_image.medium}
+              width={50}
+              height={50}
+              alt="logo"
+              className={styles.profileImage}
+            />
+            <div className={styles.profileImageUser}>
+              <div className={styles.userName}>
+                {randomPhoto.randomPhoto.user.instagram_username}
+              </div>
+              <div className={styles.location}>
+                {randomPhoto.randomPhoto.user.location}
+              </div>
             </div>
-            <div className={styles.location}>
-              {randomPhoto.randomPhoto.user.location}
+
+            <div className={styles.date}>
+              {randomPhoto.randomPhoto.created_at.split("T")[0].split("-")[2]}
+              <span> </span>
+              {
+                month[
+                  parseInt(
+                    randomPhoto.randomPhoto.created_at
+                      .split("T")[0]
+                      .split("-")[1]
+                  ) - 1
+                ]
+              }
+              <span>, </span>
+              {randomPhoto.randomPhoto.created_at.split("T")[0].split("-")[0]}
             </div>
           </div>
 
-          <div className={styles.date}>
-            {randomPhoto.randomPhoto.created_at.split("T")[0].split("-")[2]}
-            <span> </span>
-            {
-              month[
-                parseInt(
-                  randomPhoto.randomPhoto.created_at.split("T")[0].split("-")[1]
-                ) - 1
-              ]
-            }
-            <span>, </span>
-            {randomPhoto.randomPhoto.created_at.split("T")[0].split("-")[0]}
+          <div>
+            <Image
+              src={randomPhoto.randomPhoto.urls.regular}
+              width={350}
+              height={400}
+              alt="logo"
+              className={styles.imageMain}
+            />
           </div>
-        </div>
-
-        <div>
-          <Image
-            src={randomPhoto.randomPhoto.urls.regular}
-            width={350}
-            height={400}
-            alt="logo"
-            className={styles.imageMain}
-          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
