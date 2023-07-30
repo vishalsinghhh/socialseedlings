@@ -1,0 +1,12 @@
+.mainPhotos{
+    margin-bottom: 20px;
+    z-index: 999;
+}
+
+.block{
+    width: 280px;
+    height: 100px;
+    margin-left: 7px;
+    margin-top: -7px;
+    background: #000;
+}

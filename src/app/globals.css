@@ -30,7 +30,11 @@ footer{
 .theme{
   transition: 1s all ease;
 }
-
+a{
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
 a:link {
   color: white;
   background-color: transparent;
@@ -53,4 +57,20 @@ a:active {
   color: white;
   background-color: transparent;
   text-decoration: none;
+}
+.underline{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  height: 1.2px;
+  width: 1200px;
+  background: #bfbfbf;
+  margin-top: 30px;
+}
+.gridContainer{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
 }
