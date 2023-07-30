@@ -4,9 +4,10 @@ import Util from "./Util";
 import Link from "next/link";
 import BackgroundName from "./BackgroundName";
 import CardUtil from "./CardUtil";
+import { useAppContext } from "@/context/appContext";
 
 const Card = (randomPhoto) => {
-  
+  const {mode} = useAppContext()
 
   return (
     <section>
@@ -40,7 +41,7 @@ const Card = (randomPhoto) => {
         href={`/profile/${randomPhoto.randomPhoto.user.username}`}
         className={styles.myLink}
       >
-        <div className={styles.viewProfileBTN}>
+        <div className={mode==='dark'?`${styles.viewProfileBTN}`:`${styles.viewProfileBTN1}`}>
           <div>View Profile</div>
         </div>
       </Link>

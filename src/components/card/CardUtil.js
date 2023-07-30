@@ -3,9 +3,11 @@ import styles from "./Card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineHeart } from "react-icons/ai";
+import { useAppContext } from "@/context/appContext";
 
 const CardUtil = (props) => {
     console.log(props);
+    const {mode} = useAppContext()
     const month = [
         "Jan",
         "Feb",
@@ -22,7 +24,7 @@ const CardUtil = (props) => {
       ];
   return (
     <div>
-      <div className={styles.container}>
+      <div className={mode==='dark'?`${styles.container}`:`${styles.container1}`}>
         <div className={styles.userProfile}>
           <div className={styles.userProfileMain}>
             <Link
@@ -40,17 +42,17 @@ const CardUtil = (props) => {
 
             <div className={styles.profileImageUser}>
               <Link href={`/profile/${props.username}`}>
-                <div className={styles.userName}>
+                <div className={mode==='dark'?`${styles.userName}`:`${styles.userName1}`}>
                   {props?.username}
                 </div>
               </Link>
 
-              <div className={styles.location}>
+              <div className={mode==='dark'?`${styles.location}`:`${styles.location1}`}>
                 {props?.location}
               </div>
             </div>
 
-            <div className={styles.date}>
+            <div className={mode==='dark'?`${styles.date}`:`${styles.date1}`}>
               {props?.createdAt.split("T")[0].split("-")[2]}
               <span> </span>
               {
@@ -83,7 +85,7 @@ const CardUtil = (props) => {
             <div>{props?.likes} likes</div>
             
           </div>
-          <div className={styles.dis}>{props?.dis}</div>
+          <div className={mode==='dark'?`${styles.dis}`:`${styles.dis1}`}>{props?.dis}</div>
         </div>
       </div>
     </div>
