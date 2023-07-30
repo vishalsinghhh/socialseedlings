@@ -4,23 +4,11 @@ import Image from "next/image";
 import Util from "./Util";
 import Link from "next/link";
 import BackgroundName from "./BackgroundName";
+import { AiOutlineHeart } from "react-icons/ai";
+import CardUtil from "./CardUtil";
 
 const Card = (randomPhoto) => {
-  console.log(randomPhoto.randomPhoto);
-  const month = [
-    "Jan",
-    "Feb",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "Aug",
-    "Sept",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
+  
 
   return (
     <section>
@@ -58,63 +46,14 @@ const Card = (randomPhoto) => {
           <div>View Profile</div>
         </div>
       </Link>
-
-      <div className={styles.container}>
-        <div className={styles.userProfile}>
-          <div className={styles.userProfileMain}>
-            <Link
-              href={`/profile/${randomPhoto.randomPhoto.user.username}`}
-              className={styles.myLink}
-            >
-              <Image
-                src={randomPhoto.randomPhoto.user.profile_image.medium}
-                width={50}
-                height={50}
-                alt="logo"
-                className={styles.profileImage}
-              />
-            </Link>
-
-            <div className={styles.profileImageUser}>
-              <Link href={`/profile/${randomPhoto.randomPhoto.user.username}`}>
-                <div className={styles.userName}>
-                  {randomPhoto.randomPhoto.user.username}
-                </div>
-              </Link>
-
-              <div className={styles.location}>
-                {randomPhoto.randomPhoto.user.location}
-              </div>
-            </div>
-
-            <div className={styles.date}>
-              {randomPhoto.randomPhoto.created_at.split("T")[0].split("-")[2]}
-              <span> </span>
-              {
-                month[
-                  parseInt(
-                    randomPhoto.randomPhoto.created_at
-                      .split("T")[0]
-                      .split("-")[1]
-                  ) - 1
-                ]
-              }
-              <span>, </span>
-              {randomPhoto.randomPhoto.created_at.split("T")[0].split("-")[0]}
-            </div>
-          </div>
-
-          <div>
-            <Image
-              src={randomPhoto.randomPhoto.urls.regular}
-              width={350}
-              height={400}
-              alt="logo"
-              className={styles.imageMain}
-            />
-          </div>
-        </div>
-      </div>
+      <CardUtil
+        username={randomPhoto.randomPhoto.user.username}
+        profileImg={randomPhoto.randomPhoto.user.profile_image.medium}
+        location={randomPhoto.randomPhoto.user.location}
+        createdAt={randomPhoto.randomPhoto.created_at}
+        img={randomPhoto.randomPhoto.urls.regular}
+        likes={randomPhoto.randomPhoto.likes}
+      />
     </section>
   );
 };
