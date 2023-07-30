@@ -6,6 +6,7 @@ import UserInfo from "@/components/userInfo/UserInfo";
 import PhotosGrid from "@/components/photoGrid/PhotosGrid";
 import { BsList, BsGrid } from "react-icons/bs";
 import Alert from "@/components/alert/Alert";
+import { InfinitySpin } from "react-loader-spinner";
 
 const profileDetails = () => {
   const {
@@ -14,7 +15,6 @@ const profileDetails = () => {
     userInfo,
     userPhotos,
     isUserLoading,
-    isUserPhotosLoading,
     alertMsg,
   } = useAppContext();
   const params = useParams();
@@ -26,23 +26,29 @@ const profileDetails = () => {
   return (
     <div>
       {alertMsg != "" ? (
-        <Alert/>
+        <Alert />
       ) : (
         <div>
-          <UserInfo user={userInfo} />
-          <div className="underline"></div>
-          <div className="gridList">
-            <BsGrid className="BsGrid" />
-            <div className="verticalLine"></div>
+          {isUserLoading ? (
+            <div><InfinitySpin width="200" color="#fff" /></div>
+          ) : (
             <div>
-              <BsList className="BsGrid" />
+              <UserInfo user={userInfo} />
+              <div className="underline"></div>
+              <div className="gridList">
+                <BsGrid className="BsGrid" />
+                <div className="verticalLine"></div>
+                <div>
+                  <BsList className="BsGrid" />
+                </div>
+              </div>
+              <div className="gridContainer">
+                {userPhotos?.map((item, index) => {
+                  return <PhotosGrid photo={item} key={item.id} />;
+                })}
+              </div>
             </div>
-          </div>
-          <div className="gridContainer">
-            {userPhotos?.map((item, index) => {
-              return <PhotosGrid photo={item} key={item.id} />;
-            })}
-          </div>
+          )}
         </div>
       )}
     </div>
