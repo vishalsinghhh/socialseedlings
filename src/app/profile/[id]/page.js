@@ -15,13 +15,17 @@ const profileDetails = () => {
   } = useAppContext();
   const params = useParams();
   useEffect(() => {
-    getUserInfo(params.id)
+    getUserInfo(params.id);
     // getUserPhotos(params.id);
   }, []);
   // console.log(userInfo);
-  return <div>
-    <div><UserInfo user={userInfo}/></div>
-  </div>;
+  return (
+    <div>
+      <div>
+        <UserInfo user={userInfo} />
+      </div>
+    </div>
+  );
 };
 
 export default profileDetails;

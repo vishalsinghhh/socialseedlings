@@ -48,3 +48,18 @@
     background-color: transparent;
     text-decoration: none;
 }
+
+.backName{
+    display: flex;
+    position: absolute;
+    font-size: 50px;
+    font-family: "Light";
+    min-width: max-content;
+    left: -50px;
+    transform: rotate(-5deg);
+    opacity: 50%;
+    color: #F2F2F2;
+}
+.backName1{
+    padding: 10px;
+}

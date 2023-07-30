@@ -1,5 +1,6 @@
 .profileImg{
     border-radius: 100%;
+    z-index: 99;
 }
 .mainProfile{
     display: flex;

@@ -3,11 +3,13 @@ import Image from "next/image";
 import styles from "./UserInfo.module.css";
 import { BsInstagram, BsLink45Deg } from "react-icons/bs";
 import { RxTwitterLogo } from "react-icons/rx";
+import BackgroundName from "@/components/card/BackgroundName";
 
 const UserInfo = (userInfo) => {
   console.log(userInfo);
   return (
     <div>
+    <BackgroundName name={userInfo?.user?.name}/>
       <div className={styles.mainProfile}>
         <Image
           src={userInfo?.user?.profile_image?.large}
