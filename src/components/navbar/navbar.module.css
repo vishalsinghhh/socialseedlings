@@ -16,9 +16,30 @@
     justify-content: center;
     align-items: center;
 }
+.midTagLine1{
+    margin-left: 400px;
+    margin-right: 400px;
+    color: #5367FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
 .endTagLine{
     text-align: left;
     color: #00FFC4;
+}
+.mainLogo1{
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+.endTagLine1{
+    text-align: left;
+    color: #5367FF;
+    font-weight: 400;
 }
 .mainLogo{
     display: flex;

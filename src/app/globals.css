@@ -19,7 +19,7 @@ footer{
 }
 
 .light{
-  background-image: linear-gradient(#ffffff, #cfcfcf, #ffffff);
+  background-image: linear-gradient(#ffffff, #f5f5f5, #ffffff);
   color: #000;
 }
 .dark{
