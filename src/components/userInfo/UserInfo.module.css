@@ -1,23 +1,29 @@
 .profileImg{
     border-radius: 100%;
     z-index: 99;
+    margin-left: -80px;
 }
 .mainProfile{
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 99;
+    max-width: 800px;
+    min-width: 800px;
 }
 .profileDetails{
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-left: 100px;
 }
 .photosDetails{
     display: flex;
 }
 .links{
     display: flex;
+    font-size: 50px;
+    margin-top: 40px;
 }
 .profileSection{
     z-index: 9999 !important;
@@ -25,6 +31,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    font-size: 18px;
 }
 
 .followBTN{
@@ -40,4 +47,46 @@
     width: 250px;
     margin-bottom: 100px;
     border-radius: 10px;
+    font-weight: 500;
+    margin-left: 100px;
+}
+
+.backName{
+    position: absolute;
+    transform: rotate(-3deg);
+    margin-left: -550px;
+    margin-top: 100px;
+}
+
+.username{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.stats{
+    margin-right: 20px;
+}
+
+.name{
+    margin-top: 15px;
+}
+.location{
+    font-size: 16px;
+    color: #c7c7c7;
+}
+.bio{
+    font-size: 16px;
+    margin-top: 20px;
+}
+.links1{
+    margin-right: 30px;
+}
+.followValues{
+    display: flex;
+    margin-left: 100px;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: -80px;
+}
+.followers{
+
 }

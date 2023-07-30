@@ -9,27 +9,36 @@ const UserInfo = (userInfo) => {
   console.log(userInfo);
   return (
     <div>
-      <BackgroundName name={userInfo?.user?.name} />
+      <div className={styles.backName}>
+        <BackgroundName name={userInfo?.user?.name} />
+      </div>
+
       <div className={styles.profileSection}>
         <div className={styles.mainProfile}>
           <Image
             src={userInfo?.user?.profile_image?.large}
-            width={200}
-            height={200}
+            width={150}
+            height={150}
             className={styles.profileImg}
           />
           <div className={styles.profileDetails}>
-            <div>{userInfo?.user?.username}</div>
+            <div className={styles.username}>{userInfo?.user?.username}</div>
             <div className={styles.photosDetails}>
-              <div>{userInfo?.user?.total_likes} likes</div>
-              <div>{userInfo?.user?.total_photos} photos</div>
-              <div>{userInfo?.user?.total_collections} collections</div>
+              <div className={styles.stats}>
+                {userInfo?.user?.total_likes} likes
+              </div>
+              <div className={styles.stats}>
+                {userInfo?.user?.total_photos} photos
+              </div>
+              <div className={styles.stats}>
+                {userInfo?.user?.total_collections} collections
+              </div>
             </div>
-            <div>{userInfo?.user?.name}</div>
-            <div>{userInfo?.user?.location}</div>
-            <div>{userInfo?.user?.bio}</div>
+            <div className={styles.name}>{userInfo?.user?.name}</div>
+            <div className={styles.location}>{userInfo?.user?.location}</div>
+            <div className={styles.bio}>{userInfo?.user?.bio}</div>
             <div className={styles.links}>
-              <div>
+              <div className={styles.links1}>
                 <a
                   href={`https://www.instagram.com/${userInfo?.user?.social?.instagram_username}/`}
                   target="_"
@@ -37,7 +46,7 @@ const UserInfo = (userInfo) => {
                   <BsInstagram />
                 </a>
               </div>
-              <div>
+              <div className={styles.links1}>
                 <a
                   href={`https://twitter.com/${userInfo?.user?.social?.twitter_username}`}
                   target="_"
@@ -45,7 +54,7 @@ const UserInfo = (userInfo) => {
                   <RxTwitterLogo />
                 </a>
               </div>
-              <div>
+              <div className={styles.links1}>
                 <a href={userInfo?.user?.social?.portfolio_url} target="_">
                   <BsLink45Deg />
                 </a>
@@ -55,6 +64,10 @@ const UserInfo = (userInfo) => {
         </div>
         <div>
           <div className={styles.followBTN}>Follow</div>
+          <div className={styles.followValues}>
+            <div className={styles.followers}>{userInfo?.user?.followers_count} followers</div>
+            <div>{userInfo?.user?.following_count} following</div>
+          </div>
         </div>
       </div>
     </div>

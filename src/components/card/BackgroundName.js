@@ -8,6 +8,8 @@ const BackgroundName = (name) => {
       <div className={styles.backName1}>{name?.name}</div>
       <div className={styles.backName1}>{name?.name}</div>
       <div className={styles.backName1}>{name?.name}</div>
+      <div className={styles.backName1}>{name?.name}</div>
+      <div className={styles.backName1}>{name?.name}</div>
     </div>
   );
 };

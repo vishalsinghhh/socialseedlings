@@ -1,10 +1,8 @@
 import React from "react";
 import styles from "./Card.module.css";
-import Image from "next/image";
 import Util from "./Util";
 import Link from "next/link";
 import BackgroundName from "./BackgroundName";
-import { AiOutlineHeart } from "react-icons/ai";
 import CardUtil from "./CardUtil";
 
 const Card = (randomPhoto) => {
