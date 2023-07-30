@@ -7,7 +7,7 @@ const PhotosGrid = (item) => {
   return (
     <div className={styles.mainPhotos}>
       <Image src={item?.photo?.urls.regular} width={280} height={300} />
-      <div className={styles.block}></div>
+      <div className={styles.block}>{item?.photo.alt_description}</div>
     </div>
   );
 };

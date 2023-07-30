@@ -4,9 +4,12 @@
 }
 
 .block{
+    display: flex;
     width: 280px;
-    height: 100px;
+    height: 80px;
     margin-left: 7px;
     margin-top: -7px;
     background: #000;
+    text-align: left;
+    padding: 10px;
 }
