@@ -3,6 +3,7 @@ import styles from "./Card.module.css";
 import Image from "next/image";
 import Util from "./Util";
 import Link from "next/link";
+import BackgroundName from "./BackgroundName";
 
 const Card = (randomPhoto) => {
   console.log(randomPhoto.randomPhoto);
@@ -23,6 +24,16 @@ const Card = (randomPhoto) => {
 
   return (
     <section>
+      <div className={styles.BackgroundName1}>
+        <BackgroundName
+          name={
+            randomPhoto.randomPhoto.user.first_name +
+            " " +
+            randomPhoto.randomPhoto.user.last_name
+          }
+        />
+      </div>
+
       <Util
         name={
           randomPhoto.randomPhoto.user.first_name +
@@ -30,10 +41,22 @@ const Card = (randomPhoto) => {
           randomPhoto.randomPhoto.user.last_name
         }
       />
+      <div className={styles.BackgroundName2}>
+        <BackgroundName
+          name={
+            randomPhoto.randomPhoto.user.first_name +
+            " " +
+            randomPhoto.randomPhoto.user.last_name
+          }
+        />
+      </div>
       <div className={styles.container}>
         <div className={styles.userProfile}>
           <div className={styles.userProfileMain}>
-            <Link href={`/profile/${randomPhoto.randomPhoto.user.username}`} className={styles.myLink}>
+            <Link
+              href={`/profile/${randomPhoto.randomPhoto.user.username}`}
+              className={styles.myLink}
+            >
               <Image
                 src={randomPhoto.randomPhoto.user.profile_image.medium}
                 width={50}

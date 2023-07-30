@@ -52,15 +52,27 @@
 .backName{
     display: flex;
     position: absolute;
-    font-size: 50px;
+    font-size: 60px;
     font-family: "Light";
     min-width: max-content;
     left: -50px;
-    transform: rotate(-5deg);
     opacity: 20%;
     color: #F2F2F2;
     pointer-events: none;
 }
 .backName1{
     padding: 10px;
+}
+
+.BackgroundName1{
+    position: relative;
+    top: 180px;
+    left: -800px;
+    transform: rotate(-1.5deg);
+}
+.BackgroundName2{
+    position: relative;
+    top: 380px;
+    left: -800px;
+    transform: rotate(-1.5deg);
 }
