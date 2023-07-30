@@ -90,3 +90,9 @@ a:active {
 .BsGrid{
   cursor: pointer;
 }
+.listMain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

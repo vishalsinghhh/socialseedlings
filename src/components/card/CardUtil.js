@@ -74,6 +74,8 @@ const CardUtil = (props) => {
               height={400}
               alt="logo"
               className={styles.imageMain}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8Ww8AAj8BXkQ+xPEAAAAASUVORK5CYII="
             />
           </div>
           <div className={styles.likesBTN}>

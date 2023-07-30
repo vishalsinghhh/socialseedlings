@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useAppContext } from "@/context/appContext";
 import { useParams } from "next/navigation";
 import UserInfo from "@/components/userInfo/UserInfo";
@@ -7,8 +7,10 @@ import PhotosGrid from "@/components/photoGrid/PhotosGrid";
 import { BsList, BsGrid } from "react-icons/bs";
 import Alert from "@/components/alert/Alert";
 import { InfinitySpin } from "react-loader-spinner";
+import CardUtil from "@/components/card/CardUtil";
 
 const profileDetails = () => {
+  const [isGrid, setIsGrid] = useState("grid");
   const {
     getUserInfo,
     getUserPhotos,
@@ -22,7 +24,7 @@ const profileDetails = () => {
     getUserInfo(params.id);
     getUserPhotos(params.id);
   }, []);
-  console.log(alertMsg);
+  console.log(isGrid);
   return (
     <div>
       {alertMsg != "" ? (
@@ -30,23 +32,54 @@ const profileDetails = () => {
       ) : (
         <div>
           {isUserLoading ? (
-            <div><InfinitySpin width="200" color="#fff" /></div>
+            <div>
+              <InfinitySpin width="200" color="#fff" />
+            </div>
           ) : (
             <div>
               <UserInfo user={userInfo} />
               <div className="underline"></div>
               <div className="gridList">
-                <BsGrid className="BsGrid" />
+                <BsGrid
+                  className="BsGrid"
+                  onClick={() => {
+                    setIsGrid("grid");
+                  }}
+                />
                 <div className="verticalLine"></div>
-                <div>
+                <div
+                  onClick={() => {
+                    setIsGrid("list");
+                  }}
+                >
                   <BsList className="BsGrid" />
                 </div>
               </div>
-              <div className="gridContainer">
-                {userPhotos?.map((item, index) => {
-                  return <PhotosGrid photo={item} key={item.id} />;
-                })}
-              </div>
+              {isGrid == "grid" && (
+                <div className="gridContainer">
+                  {userPhotos?.map((item, index) => {
+                    return <PhotosGrid photo={item} key={item.id} />;
+                  })}
+                </div>
+              )}
+              {isGrid == "list" && (
+                <div className="listMain">
+                  {userPhotos?.map((item, index) => {
+                    return (
+                      <CardUtil
+                        username={item.user.username}
+                        profileImg={
+                          item.user.profile_image.medium
+                        }
+                        location={item.user.location}
+                        createdAt={item.created_at}
+                        img={item.urls.regular}
+                        likes={item.likes}
+                      />
+                    );
+                  })}
+                </div>
+              )}
             </div>
           )}
         </div>
