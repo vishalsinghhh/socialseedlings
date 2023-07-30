@@ -31,7 +31,7 @@ const PhotosGrid = (item) => {
         </div>
       )}
       <div className={styles.mainPhotos} onClick={() => setModalOpen(true)}>
-        <Image src={item?.photo?.urls.regular} width={280} height={300} placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8Ww8AAj8BXkQ+xPEAAAAASUVORK5CYII="/>
+        <Image className={styles.mainImage} src={item?.photo?.urls.regular} width={280} height={300} placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8Ww8AAj8BXkQ+xPEAAAAASUVORK5CYII="/>
         <div className={styles.block}>{item?.photo.alt_description}</div>
       </div>
     </div>

@@ -33,3 +33,43 @@
     font-size: 50px;
     top: 30px;
 }
+@media screen and (max-width: 1000px){
+    .mainImage{
+      width: 200px;
+      height: 250px;
+    }
+    .block{
+        display: flex;
+        width: 200px;
+        height: 80px;
+        margin-left: 1px;
+        margin-top: -5px;
+        background: #000;
+        text-align: left;
+        padding: 15px;
+    }
+  }
+@media screen and (max-width: 700px){
+    .mainImage{
+      width: 150px;
+      height: 200px;
+    }
+    .block{
+        display: flex;
+        width: 150px;
+        height: 80px;
+        margin-left: 1px;
+        margin-top: -5px;
+        background: #000;
+        text-align: left;
+        padding: 15px;
+        font-size: 11px;
+    }
+  }
+@media screen and (max-width: 650px){
+    /* .mainImage{
+      width: 120px;
+      height: 200px;
+    } */
+
+  }
