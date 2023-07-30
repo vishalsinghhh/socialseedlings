@@ -14,7 +14,7 @@ export default function Home() {
       if (isLoading) return;
       if (observer.current) observer.current.disconnect();
       observer.current = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
+        if (randomPhotos.length < 10) {
           getRandomPhoto();
         }
       });
@@ -24,7 +24,9 @@ export default function Home() {
   );
 
   useEffect(() => {
-    getRandomPhoto();
+    if (randomPhotos.length < 10) {
+      getRandomPhoto();
+    }
   }, []);
 
   return (
