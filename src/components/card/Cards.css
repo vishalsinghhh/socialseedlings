@@ -41,3 +41,9 @@ section{
         transform:translateX(-200%);
     }
 }
+
+@media screen and (max-width: 650px){
+    .MainScroll{
+        font-size: 40px;
+    }
+}
