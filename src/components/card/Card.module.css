@@ -76,3 +76,20 @@
     left: -800px;
     transform: rotate(-1.5deg);
 }
+.viewProfileBTN{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -180px;
+    bottom: 350px;
+    background: #fff;
+    color: #000;
+    width: 100px;
+    height: 100px;
+    z-index: 999;
+    border-radius: 50%;
+    font-family: "Light";
+    transform: rotate(-10deg);
+    cursor: pointer;
+}

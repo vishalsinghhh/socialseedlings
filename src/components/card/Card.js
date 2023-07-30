@@ -50,6 +50,15 @@ const Card = (randomPhoto) => {
           }
         />
       </div>
+      <Link
+        href={`/profile/${randomPhoto.randomPhoto.user.username}`}
+        className={styles.myLink}
+      >
+        <div className={styles.viewProfileBTN}>
+          <div>View Profile</div>
+        </div>
+      </Link>
+
       <div className={styles.container}>
         <div className={styles.userProfile}>
           <div className={styles.userProfileMain}>
