@@ -24,7 +24,7 @@ const profileDetails = () => {
     getUserInfo(params.id);
     getUserPhotos(params.id);
   }, []);
-  console.log(isGrid);
+
   return (
     <div>
       {alertMsg != "" ? (
@@ -75,6 +75,7 @@ const profileDetails = () => {
                         createdAt={item.created_at}
                         img={item.urls.regular}
                         likes={item.likes}
+                        dis={item.alt_description}
                       />
                     );
                   })}

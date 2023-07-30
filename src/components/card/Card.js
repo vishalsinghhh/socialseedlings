@@ -51,6 +51,7 @@ const Card = (randomPhoto) => {
         createdAt={randomPhoto.randomPhoto.created_at}
         img={randomPhoto.randomPhoto.urls.regular}
         likes={randomPhoto.randomPhoto.likes}
+        dis={randomPhoto.randomPhoto.alt_description}
       />
     </section>
   );

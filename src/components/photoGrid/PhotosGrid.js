@@ -5,7 +5,6 @@ import { RxCross1 } from "react-icons/rx";
 import CardUtil from "../card/CardUtil";
 
 const PhotosGrid = (item) => {
-  console.log(item.photo.blur_hash);
   const [isModalOpen, setModalOpen] = useState(false);
 
   return (
@@ -27,6 +26,7 @@ const PhotosGrid = (item) => {
             createdAt={item?.photo?.created_at}
             img={item?.photo?.urls.regular}
             likes={item?.photo?.likes}
+            dis={item?.photo?.alt_description}
           />
         </div>
       )}

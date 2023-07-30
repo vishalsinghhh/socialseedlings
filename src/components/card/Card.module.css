@@ -2,7 +2,7 @@
     position: relative;
     background-image: linear-gradient(#272C38, #373E51);
     width: 450px;
-    height: 550px;
+    height: 580px;
     border-radius: 10px;
     margin-top: 30px;
 }
@@ -105,4 +105,11 @@
     font-size: 30px;
     margin-right: 10px;
     cursor: pointer;
+}
+
+.dis{
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 55px;
+    color: #00FFC4;
 }

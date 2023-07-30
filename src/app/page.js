@@ -30,6 +30,7 @@ export default function Home() {
   useEffect(() => {
     getRandomPhoto();
   }, []);
+  console.log(randomPhotos);
 
   return (
     <div>

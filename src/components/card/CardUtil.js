@@ -81,7 +81,9 @@ const CardUtil = (props) => {
           <div className={styles.likesBTN}>
             <AiOutlineHeart className={styles.like} />
             <div>{props?.likes} likes</div>
+            
           </div>
+          <div className={styles.dis}>{props?.dis}</div>
         </div>
       </div>
     </div>
