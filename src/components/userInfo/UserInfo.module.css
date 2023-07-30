@@ -1,0 +1,19 @@
+.profileImg{
+    border-radius: 100%;
+}
+.mainProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileDetails{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.photosDetails{
+    display: flex;
+}
+.links{
+    display: flex;
+}
