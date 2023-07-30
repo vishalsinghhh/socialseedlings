@@ -26,6 +26,7 @@ const initialState = {
   isUserPhotosLoading: false,
   userInfo: null,
   userPhotos: null,
+  alertMsg: "",
 };
 
 const AppContext = React.createContext();
@@ -50,7 +51,9 @@ const AppProvider = ({ children }) => {
       console.log(error);
       dispatch({
         type: GET_RANDOM_PHOTO_ERROR,
-        payload: { msg: "Oops! Something went wrong" },
+        payload: {
+          msg: "Too many requests or check your internet connection!!!",
+        },
       });
     }
   };
@@ -59,7 +62,9 @@ const AppProvider = ({ children }) => {
     if (!userName) {
       dispatch({
         type: GET_USER_INFO_ERROR,
-        payload: { msg: "Oops! Something went wrong" },
+        payload: {
+          msg: "Too many requests or check your internet connection!!!",
+        },
       });
       return;
     }
@@ -76,7 +81,9 @@ const AppProvider = ({ children }) => {
       console.log(error);
       dispatch({
         type: GET_USER_INFO_ERROR,
-        payload: { msg: "Oops! Something went wrong" },
+        payload: {
+          msg: "Too many requests or check your internet connection!!!",
+        },
       });
     }
   };
@@ -95,7 +102,9 @@ const AppProvider = ({ children }) => {
       console.log(error);
       dispatch({
         type: GET_USER_PHOTOS_ERROR,
-        payload: { msg: "Oops! Something went wrong" },
+        payload: {
+          msg: "Too many requests or check your internet connection!!!",
+        },
       });
     }
   };
