@@ -15,9 +15,12 @@ export default function Home() {
       if (isLoading) return;
       if (observer.current) observer.current.disconnect();
       observer.current = new IntersectionObserver((entries) => {
-        if (randomPhotos.length < 10) {
-          getRandomPhoto();
+        if (entries[0].isIntersecting) {
+          if (randomPhotos.length < 10) {
+            getRandomPhoto();
+          }
         }
+        // getRandomPhoto();
       });
       if (node) observer.current.observe(node);
     },
@@ -25,15 +28,13 @@ export default function Home() {
   );
 
   useEffect(() => {
-    if (randomPhotos.length < 10) {
-      getRandomPhoto();
-    }
+    getRandomPhoto();
   }, []);
 
   return (
     <div>
       {alertMsg != "" ? (
-        <Alert/>
+        <Alert />
       ) : (
         <div>
           {randomPhotos.map((item, index) => {
@@ -46,9 +47,7 @@ export default function Home() {
                 >
                   <Card randomPhoto={item} key={item.id} />
                   {isLoading && randomPhotos.length < 10 && (
-                    <div>
-                      <InfinitySpin width="200" color="#fff" />
-                    </div>
+                    <div><InfinitySpin width="200" color="#fff" /></div>
                   )}
                   <div ref={lastBookElementRef}></div>
                 </div>
