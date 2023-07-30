@@ -4,6 +4,7 @@ import { useAppContext } from "@/context/appContext";
 import { useParams } from "next/navigation";
 import UserInfo from "@/components/userInfo/UserInfo";
 import PhotosGrid from "@/components/photoGrid/PhotosGrid";
+import { BsList, BsGrid } from "react-icons/bs";
 
 const profileDetails = () => {
   const {
@@ -25,9 +26,16 @@ const profileDetails = () => {
       <div>
         <UserInfo user={userInfo} />
         <div className="underline"></div>
+        <div className="gridList">
+          <BsGrid className="BsGrid"/>
+          <div className="verticalLine"></div>
+          <div>
+            <BsList className="BsGrid"/>
+          </div>
+        </div>
         <div className="gridContainer">
           {userPhotos?.map((item, index) => {
-            return <PhotosGrid photo={item} key={item.id}/>;
+            return <PhotosGrid photo={item} key={item.id} />;
           })}
         </div>
       </div>
