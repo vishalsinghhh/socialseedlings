@@ -57,8 +57,9 @@
     min-width: max-content;
     left: -50px;
     transform: rotate(-5deg);
-    opacity: 50%;
+    opacity: 20%;
     color: #F2F2F2;
+    pointer-events: none;
 }
 .backName1{
     padding: 10px;
