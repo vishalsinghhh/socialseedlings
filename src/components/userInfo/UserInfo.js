@@ -9,7 +9,7 @@ const UserInfo = (userInfo) => {
   console.log(userInfo);
   return (
     <div>
-      <div className={styles.backName}>
+      <div className={styles.BackgroundName1}>
         <BackgroundName name={userInfo?.user?.name} />
       </div>
 
@@ -62,7 +62,7 @@ const UserInfo = (userInfo) => {
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.flowBTNmain}>
           <div className={styles.followBTN}>Follow</div>
           <div className={styles.followValues}>
             <div className={styles.followers}>{userInfo?.user?.followers_count} followers</div>

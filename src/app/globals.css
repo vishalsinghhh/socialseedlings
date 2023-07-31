@@ -14,23 +14,23 @@ body {
   font-family: "Light"; /*Can be any text*/
   src: local("Druk Wide Bold"), url("../Font.ttf") format("truetype");
 }
-footer{
+footer {
   margin-top: auto;
 }
 
-.light{
+.light {
   background-image: linear-gradient(#ffffff, #f5f5f5, #ffffff);
   color: #000;
 }
-.dark{
-  background-image: linear-gradient(#14171F, #0C2640, #14171F);
+.dark {
+  background-image: linear-gradient(#14171f, #0c2640, #14171f);
   color: #f0f0f0;
 }
 
-.theme{
+.theme {
   transition: 1s all ease;
 }
-a{
+a {
   color: white;
   background-color: transparent;
   text-decoration: none;
@@ -58,7 +58,7 @@ a:active {
   background-color: transparent;
   text-decoration: none;
 }
-.underline{
+.underline {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,36 +69,36 @@ a:active {
   background: #bfbfbf;
   margin-top: 30px;
 }
-.gridContainer{
+.gridContainer {
   display: grid;
   grid-template-columns: auto auto auto auto;
   padding: 10px;
 }
-.gridList{
+.gridList {
   display: flex;
   justify-content: center;
   font-size: 30px;
   padding: 10px;
 }
-.verticalLine{
+.verticalLine {
   height: 30px;
   width: 1.5px;
   background: #bcbcbc;
   margin-left: 10px;
   margin-right: 10px;
 }
-.BsGrid{
+.BsGrid {
   cursor: pointer;
 }
-.listMain{
+.listMain {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-@media screen and (max-width: 1280px){
-  .gridContainer{
+@media screen and (max-width: 1280px) {
+  .gridContainer {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 1000px;
@@ -106,10 +106,31 @@ a:active {
     align-items: center;
     margin-left: 100px;
   }
+  .underline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: 1.2px;
+    width: 1000px;
+    background: #bfbfbf;
+    margin-top: 30px;
+    margin-left: 80px;
+  }
+}
+@media screen and (max-width: 1280px){
+  .gap{
+    margin-top: 150px;
+  }
+  .underline{
+    width: 600px;
+    margin-left: 250px;
+  }
 }
 
-@media screen and (max-width: 650px){
-  .gridContainer{
+@media screen and (max-width: 650px) {
+  .gridContainer {
     display: grid;
     grid-template-columns: auto auto;
     width: 1000px;

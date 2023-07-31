@@ -39,6 +39,7 @@ const profileDetails = () => {
           ) : (
             <div>
               <UserInfo user={userInfo} />
+              <div className="gap"></div>
               <div className="underline"></div>
               <div className="gridList">
                 <BsGrid
