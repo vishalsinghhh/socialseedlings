@@ -139,3 +139,9 @@ a:active {
     margin-left: 100px;
   }
 }
+
+@media screen and (max-width: 480px){
+  .gridContainer {
+    margin-left: 0px;
+  }
+}

@@ -168,3 +168,19 @@
     height: 100px;
   }
 }
+@media screen and (max-width: 480px){
+    .profileImg{
+        width: 60px;
+        height: 60px;
+        position: relative;
+        left: 30px;
+      }
+    .bio {
+        font-size: 12px;
+        margin-top: 20px;
+        max-width: 200px;
+      }
+      .flowBTNmain{
+        margin-left: -150px;
+      }
+}
