@@ -18,6 +18,7 @@ const profileDetails = () => {
     userPhotos,
     isUserLoading,
     alertMsg,
+    mode
   } = useAppContext();
   const params = useParams();
   useEffect(() => {
@@ -33,7 +34,7 @@ const profileDetails = () => {
         <div>
           {isUserLoading ? (
             <div>
-              <InfinitySpin width="200" color="#fff" />
+              <InfinitySpin width="200" color={`${mode==='dark'?"#fff":"#000"}`} />
             </div>
           ) : (
             <div>

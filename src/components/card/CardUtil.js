@@ -24,7 +24,7 @@ const CardUtil = (props) => {
       ];
   return (
     <div>
-      <div className={mode==='dark'?`${styles.container}`:`${styles.container1}`}>
+      <div className={mode==='dark'?`${styles.container}`:`${styles.container} ${styles.container1}`}>
         <div className={styles.userProfile}>
           <div className={styles.userProfileMain}>
             <Link
@@ -42,17 +42,17 @@ const CardUtil = (props) => {
 
             <div className={styles.profileImageUser}>
               <Link href={`/profile/${props.username}`}>
-                <div className={mode==='dark'?`${styles.userName}`:`${styles.userName1}`}>
+                <div className={mode==='dark'?`${styles.userName}`:`${styles.userName} ${styles.userName1}`}>
                   {props?.username}
                 </div>
               </Link>
 
-              <div className={mode==='dark'?`${styles.location}`:`${styles.location1}`}>
+              <div className={mode==='dark'?`${styles.location}`:`${styles.location} ${styles.location1}`}>
                 {props?.location}
               </div>
             </div>
 
-            <div className={mode==='dark'?`${styles.date}`:`${styles.date1}`}>
+            <div className={mode==='dark'?`${styles.date}`:`${styles.date} ${styles.date1}`}>
               {props?.createdAt.split("T")[0].split("-")[2]}
               <span> </span>
               {
@@ -85,7 +85,7 @@ const CardUtil = (props) => {
             <div>{props?.likes} likes</div>
             
           </div>
-          <div className={mode==='dark'?`${styles.dis}`:`${styles.dis1}`}>{props?.dis}</div>
+          <div className={mode==='dark'?`${styles.dis}`:`${styles.dis} ${styles.dis1}`}>{props?.dis}</div>
         </div>
       </div>
     </div>

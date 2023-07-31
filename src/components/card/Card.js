@@ -41,7 +41,7 @@ const Card = (randomPhoto) => {
         href={`/profile/${randomPhoto.randomPhoto.user.username}`}
         className={styles.myLink}
       >
-        <div className={mode==='dark'?`${styles.viewProfileBTN}`:`${styles.viewProfileBTN1}`}>
+        <div className={mode==='dark'?`${styles.viewProfileBTN}`:`${styles.viewProfileBTN} ${styles.viewProfileBTN1}`}>
           <div>View Profile</div>
         </div>
       </Link>

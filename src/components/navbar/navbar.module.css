@@ -16,14 +16,25 @@
     justify-content: center;
     align-items: center;
 }
+.midTagLine2{
+    color: #5367FF;
+    font-weight: 400;
+}
 .endTagLine{
     text-align: left;
     color: #00FFC4;
+}
+.endTagLine2{
+    color: #5367FF;
+    font-weight: 400;
 }
 .mainLogo{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.mainLogo1{
+    color: #000;font-weight: 400;
 }
 
 .myLink{
@@ -80,6 +91,9 @@
         display: block;
         text-align: right;
         color: #00FFC4;
+    }
+    .mobile1{
+        color: #5367FF;
     }
     .toggle{
         margin-top: 10px;

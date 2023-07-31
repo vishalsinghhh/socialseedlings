@@ -7,7 +7,7 @@ import { InfinitySpin } from "react-loader-spinner";
 import Alert from "@/components/alert/Alert";
 
 export default function Home() {
-  const { getRandomPhoto, randomPhotos, isLoading, alertMsg } = useAppContext();
+  const { getRandomPhoto, randomPhotos, isLoading, alertMsg, mode} = useAppContext();
 
   const observer = useRef();
   const lastBookElementRef = useCallback(
@@ -48,7 +48,7 @@ export default function Home() {
                 >
                   <Card randomPhoto={item} key={item.id} />
                   {isLoading && randomPhotos.length < 10 && (
-                    <div><InfinitySpin width="200" color="#fff" /></div>
+                    <div><InfinitySpin width="200" color={`${mode==='dark'?"#fff":"#000"}`} /></div>
                   )}
                   <div ref={lastBookElementRef}></div>
                 </div>

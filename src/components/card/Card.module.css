@@ -5,14 +5,10 @@
     height: 590px;
     border-radius: 10px;
     margin-top: 30px;
+    font-weight: 400;
 }
 .container1{
-    position: relative;
-    background-image: linear-gradient(#EFEFEF, #B9B9B9);
-    width: 450px;
-    height: 590px;
-    border-radius: 10px;
-    margin-top: 30px;
+    background-image: linear-gradient(#EFEFEF, #B9B9B9) !important;
 }
 
 .imageMain{
@@ -45,8 +41,6 @@
     color: #cacaca;
 }
 .location1{
-    font-size: 14px; 
-    font-weight: 400;
     color: #909090;
 }
 .date{
@@ -58,15 +52,10 @@
 }
 .userName1{
     color: #000;
-    font-weight: 400;
 }
 .date1{
-    position: absolute;
-    font-size: 14px; 
+
     color: #909090;
-    right: 50px;
-    top: 50px;
-    font-weight: 400;
 }
 .myLink{
     color: white;
@@ -130,21 +119,8 @@
     cursor: pointer;
 }
 .viewProfileBTN1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: -180px;
-    bottom: 350px;
     background: #000;
     color: #fff;
-    width: 100px;
-    height: 100px;
-    z-index: 999;
-    border-radius: 50%;
-    font-family: "Light";
-    transform: rotate(-10deg);
-    cursor: pointer;
 }
 .likesBTN{
     display: flex;
@@ -168,11 +144,7 @@
     max-width: 350px;
 }
 .dis1{
-    text-align: left;
-    margin-top: 5px;
-    margin-left: 55px;
     color: #5367FF;
-    max-width: 350px;
 }
 
 @media screen and (max-width: 1200px){
@@ -234,5 +206,13 @@
     }
     .BackgroundName2{
         top: 300px;
+    }
+    .date{
+        right: 20px;
+        top: 50px;
+        font-size: 12px;
+    }
+    .userProfileMain{
+        margin-left: -20px;
     }
 }
