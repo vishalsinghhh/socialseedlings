@@ -32,3 +32,10 @@ To Visit App:
 `localhost:3000` 
 
 ## Demo link - 
+
+<a href="https://socialseedling.netlify.app" target="_blank">Link</a>
+
+## Project Screen Shot(s)
+<img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/e96e9660-3a21-432c-a157-35e011dda4eb" alt="" width="500"/> <img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/2bf41665-1cf9-4540-9905-0b8892229c15" width="500"/> <img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/5a397714-9668-48f6-b5c7-7ebdccef968c" width="500"/>
+<img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/07db5193-4d7b-4d67-ba41-9965df131889" width="500"/>
+
