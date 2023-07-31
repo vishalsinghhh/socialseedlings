@@ -41,7 +41,7 @@ const AppProvider = ({ children }) => {
     dispatch({ type: GET_RANDOM_PHOTO_BEGIN });
     try {
       const response = await axios.get(
-        `https://api.unsplash.com/photos/random?client_id=aDZvgNlQDb1O8mDzzvXCqgBJBrqCihjpUMKRJa1UnFg`
+        `https://api.unsplash.com/photos/random?client_id=${process.env.NEXT_PUBLIC_API_KEY}`
       );
       dispatch({
         type: GET_RANDOM_PHOTO_SUCCESS,
@@ -71,7 +71,7 @@ const AppProvider = ({ children }) => {
     dispatch({ type: GET_USER_INFO_BEGIN });
     try {
       const response = await axios.get(
-        `https://api.unsplash.com/users/${userName}?client_id=aDZvgNlQDb1O8mDzzvXCqgBJBrqCihjpUMKRJa1UnFg`
+        `https://api.unsplash.com/users/${userName}?client_id=${process.env.NEXT_PUBLIC_API_KEY}`
       );
       dispatch({
         type: GET_USER_INFO_SUCCESS,
@@ -92,7 +92,7 @@ const AppProvider = ({ children }) => {
     dispatch({ type: GET_USER_PHOTOS_BEGIN });
     try {
       const response = await axios.get(
-        `https://api.unsplash.com/users/${userName}/photos?client_id=aDZvgNlQDb1O8mDzzvXCqgBJBrqCihjpUMKRJa1UnFg`
+        `https://api.unsplash.com/users/${userName}/photos?client_id=${process.env.NEXT_PUBLIC_API_KEY}`
       );
       dispatch({
         type: GET_USER_PHOTOS_SUCCESS,
