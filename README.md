@@ -33,6 +33,6 @@ To Visit App:
 <a href="https://socialseedling.netlify.app" target="_blank">Link</a>
 
 ## Project Screen Shot(s)
-<img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/e96e9660-3a21-432c-a157-35e011dda4eb" alt="" width="500"/> <img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/2bf41665-1cf9-4540-9905-0b8892229c15" width="500"/> <img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/5a397714-9668-48f6-b5c7-7ebdccef968c" width="500"/>
-<img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/07db5193-4d7b-4d67-ba41-9965df131889" width="500"/>
+<img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/f3d27885-b048-47df-a5dc-cab318cb4412" alt="" width="500"/> <img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/1fe51b41-eea4-4b36-980e-b9a9554507a2" width="500"/> <img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/651c99c9-032f-4cc5-b8ae-65dab1e6477a" width="500"/>
+<img src="https://github.com/vishalsinghhh/socialseedlings/assets/71393033/79c89c76-16dd-4a04-b0ca-afae58575b89" width="500"/>
 
