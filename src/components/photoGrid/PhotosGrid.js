@@ -3,8 +3,10 @@ import Image from "next/image";
 import styles from "./photoGrid.module.css";
 import { RxCross1 } from "react-icons/rx";
 import CardUtil from "../card/CardUtil";
+import { useAppContext } from "@/context/appContext";
 
 const PhotosGrid = (item) => {
+  const {mode} = useAppContext()
   const [isModalOpen, setModalOpen] = useState(false);
 
   return (
@@ -17,7 +19,7 @@ const PhotosGrid = (item) => {
               setModalOpen(false);
             }}
           >
-            <RxCross1 />
+            <RxCross1 className={mode==='light'&&`${styles.cross1}`}/>
           </div>
           <CardUtil
             username={item?.photo?.user.username}
@@ -32,7 +34,7 @@ const PhotosGrid = (item) => {
       )}
       <div className={styles.mainPhotos} onClick={() => setModalOpen(true)}>
         <Image className={styles.mainImage} src={item?.photo?.urls.regular} width={280} height={300} placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8Ww8AAj8BXkQ+xPEAAAAASUVORK5CYII="/>
-        <div className={styles.block}>{item?.photo.alt_description}</div>
+        <div className={mode==='dark'?`${styles.block}`:`${styles.block} ${styles.block1}`}>{item?.photo.alt_description}</div>
       </div>
     </div>
   );

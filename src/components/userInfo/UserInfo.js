@@ -4,8 +4,10 @@ import styles from "./UserInfo.module.css";
 import { BsInstagram, BsLink45Deg } from "react-icons/bs";
 import { RxTwitterLogo } from "react-icons/rx";
 import BackgroundName from "@/components/card/BackgroundName";
+import { useAppContext } from "@/context/appContext";
 
 const UserInfo = (userInfo) => {
+  const {mode}= useAppContext()
   console.log(userInfo);
   return (
     <div>
@@ -35,7 +37,7 @@ const UserInfo = (userInfo) => {
               </div>
             </div>
             <div className={styles.name}>{userInfo?.user?.name}</div>
-            <div className={styles.location}>{userInfo?.user?.location}</div>
+            <div className={mode==='dark'?`${styles.location}`:`${styles.location} ${styles.location1}`}>{userInfo?.user?.location}</div>
             <div className={styles.bio}>{userInfo?.user?.bio}</div>
             <div className={styles.links}>
               <div className={styles.links1}>
@@ -43,7 +45,7 @@ const UserInfo = (userInfo) => {
                   href={`https://www.instagram.com/${userInfo?.user?.social?.instagram_username}/`}
                   target="_"
                 >
-                  <BsInstagram />
+                  <BsInstagram className={mode==='light'&&`${styles.link3}`}/>
                 </a>
               </div>
               <div className={styles.links1}>
@@ -51,19 +53,19 @@ const UserInfo = (userInfo) => {
                   href={`https://twitter.com/${userInfo?.user?.social?.twitter_username}`}
                   target="_"
                 >
-                  <RxTwitterLogo />
+                  <RxTwitterLogo className={mode==='light'&&`${styles.link3}`}/>
                 </a>
               </div>
               <div className={styles.links1}>
                 <a href={userInfo?.user?.social?.portfolio_url} target="_">
-                  <BsLink45Deg />
+                  <BsLink45Deg className={mode==='light'&&`${styles.link3}`}/>
                 </a>
               </div>
             </div>
           </div>
         </div>
         <div className={styles.flowBTNmain}>
-          <div className={styles.followBTN}>Follow</div>
+          <div className={mode==='dark'?`${styles.followBTN}`:`${styles.followBTN} ${styles.followBTN1}`}>Follow</div>
           <div className={styles.followValues}>
             <div className={styles.followers}>{userInfo?.user?.followers_count} followers</div>
             <div>{userInfo?.user?.following_count} following</div>
